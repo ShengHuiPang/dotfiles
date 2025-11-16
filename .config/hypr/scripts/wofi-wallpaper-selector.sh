@@ -86,7 +86,7 @@ No"
         sddmselected=$(printf "%s\n" "$sddmchangechoice" | rofi -show -dmenu -p "Would you like to change the SDDM Wallpaper as well?")
         case "$sddmselected" in
           Yes)
-            pkexec cp $original_path /usr/share/sddm/themes/sugar-candy/wallpaper.jpg; exit 0
+            pkexec cp $original_path /usr/share/sddm/themes/sugar-candy/wallpaper.jpg && notify-send "SDDM:" "Lockscreen Wallpaper has been changed successfully!"; exit 0
           ;;
           No|*)
             exit 0
