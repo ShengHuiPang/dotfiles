@@ -157,13 +157,13 @@ REQUIRED_DEPS=(
     "rofi"
     "wofi"
     "swww"
-    "wal"
+    "python-pywal16"
     "grim"
     "slurp"
 )
 
 OPTIONAL_DEPS=(
-    "hyprpanel"
+    "ags-hyprpanel-git"
     "hyprlock"
     "wlogout"
     "kitty"
