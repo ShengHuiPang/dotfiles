@@ -15,5 +15,5 @@ My Linux Configuration and dotfiles Includes:
  10. Neovim Configurations
  11. Wofi Wallpaper Picker Configs
  12. Packages installed (not added yet)
- 13. Wallpapers and Pictures (not added yet)
+ 13. Wallpapers
  14. Custom Scripts
