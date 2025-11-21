@@ -1,4 +1,3 @@
----
 name: 🔍 Dotfiles Validation
 
 on:
@@ -19,7 +18,6 @@ jobs:
       - name: 🔍 Run ShellCheck on all shell scripts
         uses: ludeeus/action-shellcheck@master
         with:
-          scandir: '.'
           severity: warning
           ignore_paths: .git .github node_modules
         continue-on-error: true
@@ -98,7 +96,7 @@ jobs:
     steps:
       - name: 📥 Checkout repository
         uses: actions/checkout@v4
-
+      
       - name: 🔧 Setup Arch environment
         run: |
           pacman -Syu --noconfirm
