@@ -23,6 +23,11 @@ jobs:
           ignore_paths: .git .github node_modules
         continue-on-error: true
 
+      - name: 📄 Create dependency file
+        run: |
+          echo "yamllint" > requirements.txt
+          echo "toml" >> requirements.txt
+
       - name: 🐍 Set up Python
         uses: actions/setup-python@v5
         with:
@@ -30,7 +35,7 @@ jobs:
           cache: 'pip' 
 
       - name: 🔧 Install validation tools
-        run: pip install yamllint toml
+        run: pip install -r requirements.txt
 
       - name: 📝 Validate TOML and YAML files
         run: |
@@ -57,7 +62,7 @@ jobs:
             --include="*.sh" \
             --include="*.rasi" \
             --include="layout" \
-            --.; then
+            .; then
             echo "❌ Found hardcoded home directory paths!"
             exit 1
           else
@@ -67,7 +72,6 @@ jobs:
       - name: 🔐 Verify script executability
         run: |
           failed=0
-          # (Your original checks here - shortened for brevity but logic remains)
           if [ -d "Scripts" ]; then
             while IFS= read -r script; do
               [ -x "$script" ] || failed=1
