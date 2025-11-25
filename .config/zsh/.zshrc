@@ -1,6 +1,7 @@
 HISTFILE=~/.cache/zsh/history
 HISTSIZE=10000
 SAVEHIST=10000
+TerminalEmulator=alacritty
 
 autoload -U compinit; compinit
 [ -f /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.zsh ] && source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.zsh
@@ -19,7 +20,7 @@ if [ -n "$DISPLAY" ] || [ -n "$WAYLAND_DISPLAY" ]; then
     [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
     source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 else
-
+    PS1="%F{green}%n%f@%F{blue}%m %F{yellow}%~ %F{white}%% %f"
 fi
 
 

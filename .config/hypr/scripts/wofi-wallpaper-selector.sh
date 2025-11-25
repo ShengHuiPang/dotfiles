@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 # Configuration
 WALLPAPER_DIR="$HOME/dotfiles/Wallpapers"  # Change this to your wallpaper directory
 CACHE_DIR="$HOME/.cache/wallpaper-selector"
@@ -79,14 +80,15 @@ if [ -n "$selected" ]; then
     # Ensure a valid wallpaper was found before proceeding
     if [ -n "$original_path" ]; then
         # Set wallpaper using swww with the original file
-        swww img "$original_path" --transition-type grow --transition-step 255 --transition-fps 60 --transition-duration 0.8 && sleep 0.575 && wal -i "$original_path"
+        swww img "$original_path" --transition-type any --transition-step 255 --transition-fps 60 --transition-duration 0.8 && sleep 0.575 && wal -i "$original_path"
         
         sddmchangechoice="Yes
 No"
-        sddmselected=$(printf "%s\n" "$sddmchangechoice" | rofi -show -dmenu -p "Would you like to change the SDDM Wallpaper as well?")
+        sddmselected=$(printf "%s\n" "$sddmchangechoice" | rofi -show -dmenu -p "Would you like to change the SDDM & rEFInd Wallpaper as well?")
         case "$sddmselected" in
           Yes)
-            pkexec cp $original_path /usr/share/sddm/themes/sugar-candy/wallpaper.jpg && notify-send "SDDM:" "Lockscreen Wallpaper has been changed successfully!"; exit 0
+            # pkexec /home/jason/Scripts/ && notify-send "Hyprland:" "Lockscreen Wallpaper has been changed successfully!"; exit 0
+            pkexec cp $original_path /usr/share/sddm/themes/sugar-candy/wallpaper.jpg && notify-send "Hyprland:" "Lockscreen Wallpaper has been changed successfully!"; exit 0
           ;;
           No|*)
             exit 0

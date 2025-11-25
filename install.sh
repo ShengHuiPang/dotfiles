@@ -160,6 +160,7 @@ REQUIRED_DEPS=(
     "python-pywal16"
     "grim"
     "slurp"
+    "wayvnc"
 )
 
 OPTIONAL_DEPS=(
