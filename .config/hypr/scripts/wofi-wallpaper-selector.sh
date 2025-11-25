@@ -87,7 +87,7 @@ No"
         sddmselected=$(printf "%s\n" "$sddmchangechoice" | rofi -show -dmenu -p "Would you like to change the SDDM & rEFInd Wallpaper as well?")
         case "$sddmselected" in
           Yes)
-            # pkexec /home/jason/Scripts/ && notify-send "Hyprland:" "Lockscreen Wallpaper has been changed successfully!"; exit 0
+            # pkexec $HOME/Scripts/ && notify-send "Hyprland:" "Lockscreen Wallpaper has been changed successfully!"; exit 0
             pkexec cp $original_path /usr/share/sddm/themes/sugar-candy/wallpaper.jpg && notify-send "Hyprland:" "Lockscreen Wallpaper has been changed successfully!"; exit 0
           ;;
           No|*)
