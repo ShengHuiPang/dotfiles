@@ -388,9 +388,9 @@ fi
 
 Made with 🩵 for Artix Linux and Hyprland
 
-[![CI/CD Pipeline](https://img.shields.io/badge/CI%2FCD-Passing-brightgreen?logo=github-actions)](https://github.com/r3bo0tbx1/dotfiles/actions)
+[![🔍 Dotfiles Validation](https://github.com/ShengHuiPang/dotfiles/actions/workflows/validate.yml/badge.svg)](https://github.com/ShengHuiPang/dotfiles/actions/workflows/validate.yml)
 
-*Last Updated: 2025-11-16*
+*Last Updated: 2025-12-06*
 
 ### I use Artix btw 😎✨
 
