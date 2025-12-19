@@ -21,3 +21,129 @@ alias pm='doas pacman'
 alias ref='clear && source $HOME/.config/zsh/.zshrc'
 alias zd='z /mnt/DATA/'
 alias zc='z /mnt/Windows/'
+
+# pi() {
+#   clear
+#   local selection pkglist
+#  
+#   selection=$(
+#     paru -Sl --color=always |
+#     awk '{printf "%s/%s\t%-10s %-40s %s\n", $1, $2, $1, $2, $3}' |
+#     fzf --ansi \
+#         --multi \
+#         --exact \
+#         --reverse \
+#         --delimiter='\t' \
+#         --with-nth=2 \
+#         --prompt='[Repo Package] ' \
+#         --header=$'TAB = multi-select • ENTER = confirm\n' \
+#         --preview 'bash -c "
+#           repopkg=\$(echo {} | cut -f1)
+#           paru -Si \${repopkg} 2>/dev/null
+#         "' \
+#         --height=100%
+#   )
+#  
+#   [[ -z "$selection" ]] && return
+#  
+#   pkglist=$(echo "$selection" | cut -f1)
+#  
+#   clear
+#   echo
+#   echo "Selected package(s):"
+#   echo "$pkglist"
+#   echo
+#   printf "Install selected package(s)? [Y/n]: "
+#   read REPLY </dev/tty
+#   echo
+#  
+#   if [[ -z "$REPLY" || "$REPLY" =~ ^[Yy]$ ]]; then
+#       echo "$pkglist" | awk '{print $1}' | xargs -ro paru -Sy
+#   else
+#       echo "Cancelled."
+#   fi
+# }
+
+pmi() {
+  clear
+  local selection pkglist
+
+  selection=$(
+    pacman -Sl --color=always |
+    awk '{printf "%s/%s\t%-10s %-40s %s\n", $1, $2, $1, $2, $3}' |
+    fzf --ansi \
+        --multi \
+        --exact \
+        --reverse \
+        --delimiter='\t' \
+        --with-nth=2 \
+        --prompt='[Repo Package] ' \
+        --header=$'TAB = multi-select • ENTER = confirm\n' \
+        --preview 'bash -c "
+          repopkg=\$(echo {} | cut -f1)
+          paru -Si \${repopkg} 2>/dev/null
+        "' \
+        --height=100%
+  )
+
+  [[ -z "$selection" ]] && return
+
+  pkglist=$(echo "$selection" | cut -f1)
+
+  clear
+  echo
+  echo "Selected package(s):"
+  echo "$pkglist"
+  echo
+  printf "Install selected package(s)? [Y/n]: "
+  read REPLY </dev/tty
+  echo
+
+  if [[ -z "$REPLY" || "$REPLY" =~ ^[Yy]$ ]]; then
+      echo "$pkglist" | awk '{print $1}' | xargs -ro doas pacman -Sy
+  else
+      echo "Cancelled."
+  fi
+}
+
+pi() {
+  clear
+  local selection pkglist
+
+  selection=$(
+    yay -SlN --color=always | yay -Sla --color=always |
+    awk '{printf "%s/%s\t%-10s %-40s %s\n", $1, $2, $1, $2, $3}' |
+    fzf --ansi \
+        --multi \
+        --exact \
+        --delimiter='\t' \
+        --reverse \
+        --with-nth=2 \
+        --prompt='[Repo Package] ' \
+        --header=$'TAB = multi-select • ENTER = confirm\n' \
+        --preview 'bash -c "
+          repopkg=\$(echo {} | cut -f1)
+          yay -Si \${repopkg} 2>/dev/null
+        "' \
+        --height=100%
+  )
+
+  [[ -z "$selection" ]] && return
+
+  pkglist=$(echo "$selection" | cut -f1)
+
+  clear
+  echo
+  echo "Selected package(s):"
+  echo "$pkglist"
+  echo
+  printf "Install selected package(s)? [Y/n]: "
+  read REPLY </dev/tty
+  echo
+
+  if [[ -z "$REPLY" || "$REPLY" =~ ^[Yy]$ ]]; then
+      echo "$pkglist" | awk '{print $1}' | xargs -ro yay -Sy
+  else
+      echo "Cancelled."
+  fi
+}
