@@ -26,8 +26,8 @@
 - **Logout Menu**: Wlogout with power controls
 
 ### 🌈 Dynamic Theming
-- **PyWAL Integration**: Automatic color scheme generation from wallpapers
-- All UI elements synchronized: Hyprland, Alacritty, Rofi, Wlogout
+- **PyWAL16 Integration**: Automatic color scheme generation from wallpapers
+- All UI elements synchronized: Hyprland, Alacritty, Rofi, Wlogout, rEFInd, sddm
 - Seamless theme switching with wallpaper selector
 - 15+ wallpapers included (see Wallpapers section)
 
@@ -115,7 +115,7 @@ README.md
 hyprland hyprpanel hyprlock xdg-desktop-portal-hyprland wayvnc
 
 # Wallpaper & Theming
-swww python-pywal imagemagick
+swww python-pywal16 imagemagick
 
 # Launchers & Menus
 rofi-wayland wofi wlogout
