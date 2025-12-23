@@ -6,6 +6,7 @@ CACHE_DIR="$HOME/.cache/wallpaper-selector"
 THUMBNAIL_WIDTH="250"  # Size of thumbnails in pixels (16:9)
 THUMBNAIL_HEIGHT="141"
 BGPNG="$HOME/Wallpapers/bg.png"
+RESOLUTION="2560x1600"
 
 # Create cache directory if it doesn't exist
 mkdir -p "$CACHE_DIR"
@@ -90,7 +91,7 @@ No"
         case "$sddmselected" in
           Yes)
             # pkexec $HOME/Scripts/ && notify-send "Hyprland:" "Lockscreen Wallpaper has been changed successfully!"; exit 0
-            magick $original_path -gravity center -resize "2560x1600^" -crop "2560x1600+0+0" -brightness-contrast -28,-20 -blur 0x20 $BGPNG;
+            magick $original_path -gravity center -resize "$RESOLUTION^" -crop "$RESOLUTION+0+0" -brightness-contrast -28,-20 -blur 0x20 $BGPNG;
             pkexec $HOME/.config/hypr/scripts/sddm_rEFInd_bg.sh $original_path $BGPNG && notify-send "Hyprland:" "Lockscreen & rEFInd Wallpaper has been changed successfully!"; exit 0
 
             # pkexec cp $original_path /usr/share/sddm/themes/sugar-candy/wallpaper.jpg && magick $original_path -gravity center -resize "1920x1200^" -crop "1920x1200+0+0" -brightness-contrast -20 -gaussian-blur 0x20 /boot/efi/EFI/refind/themes/jsfsf-rEFInd/bg.png && notify-send "Hyprland:" "Lockscreen Wallpaper has been changed successfully!"; exit 0
