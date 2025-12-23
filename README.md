@@ -392,6 +392,6 @@ Made with 🩵 for Artix Linux and Hyprland
 
 *Last Updated: 2025-11-16*
 
-### I use Artix btw 😎✨
+### Like Arch but more superior. I use Artix btw 😎✨
 
 </div>
