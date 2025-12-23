@@ -6,7 +6,7 @@
 ![Hyprland](https://img.shields.io/badge/WM-Hyprland-5e81ac?logo=wayland)
 ![Shell](https://img.shields.io/badge/Shell-Zsh-green?logo=gnu-bash)
 ![Wayland](https://img.shields.io/badge/Wayland-Compatible-blue?logo=wayland)
-![PyWAL16](https://img.shields.io/badge/Theme-PyWAL-orange)
+![PyWAL16](https://img.shields.io/badge/Theme-PyWAL16-orange)
 ![Maintained](https://img.shields.io/badge/Maintained-Yes-brightgreen)
 
 </div>
