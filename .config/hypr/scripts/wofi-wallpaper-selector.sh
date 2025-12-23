@@ -6,7 +6,7 @@ CACHE_DIR="$HOME/.cache/wallpaper-selector"
 THUMBNAIL_WIDTH="250"  # Size of thumbnails in pixels (16:9)
 THUMBNAIL_HEIGHT="141"
 BGPNG="$HOME/Wallpapers/bg.png"
-RESOLUTION="2560x1600"
+RESOLUTION="2560x1600" # Please use the exact screen resolution from your monitor/screen.
 
 # Create cache directory if it doesn't exist
 mkdir -p "$CACHE_DIR"
