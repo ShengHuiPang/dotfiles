@@ -390,7 +390,7 @@ Made with 🩵 for Artix Linux and Hyprland
 
 [![CI/CD Pipeline](https://img.shields.io/badge/CI%2FCD-Passing-brightgreen?logo=github-actions)](https://github.com/r3bo0tbx1/dotfiles/actions)
 
-*Last Updated: 2025-11-16*
+*Last Updated: 2025-12-24*
 
 ### Like Arch but more superior. I use Artix btw 😎✨
 
