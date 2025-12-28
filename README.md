@@ -13,6 +13,26 @@
 
 > A modern, aesthetically-pleasing Wayland desktop environment configuration for Artix Linux (dinit) featuring Hyprland, dynamic PyWAL theming, and extensive customization.
 
+## ✨ Screenshots
+![alt text](https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/01.png "Pic 1")
+![alt text](https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/02.png "Pic 2")
+![alt text](https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/03.png "Pic 3")
+![alt text](https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/04.png "Pic 4")
+![alt text](https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/05.jpg "Pic 5")
+![alt text](https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/06.jpg "Pic 6")
+![alt text](https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/07.png "Pic 7")
+![alt text](https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/08.png "Pic 8")
+![alt text](https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/09.png "Pic 9")
+![alt text](https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/10.jpg "Pic 10")
+![alt text](https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/11.jpg "Pic 11")
+![alt text](https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/12.png "Pic 12")
+![alt text](https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/13.png "Pic 13")
+![alt text](https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/14.png "Pic 14")
+![alt text](https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/15.png "Pic 15")
+![alt text](https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/16.jpg "Pic 16")
+![alt text](https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/17.jpg "Pic 17")
+![alt text](https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/18.png "Pic 18")
+
 ## ✨ Features
 
 ### 🎯 Core Components
@@ -97,7 +117,6 @@ README.md
 
 ## 🚧 Upcoming Features
 
-- 🎨 rEFInd Themes
 - 📦 Additional Packages
 
 ## 🚀 Quick Start
