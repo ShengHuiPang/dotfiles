@@ -15,7 +15,6 @@
 
 
 ## 🎨 Screenshots
-## 🎨 Screenshots
 
 <table>
   <tr>
