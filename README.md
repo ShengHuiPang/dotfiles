@@ -15,6 +15,8 @@
 
 
 ## 🎨 Screenshots
+## 🎨 Screenshots
+
 <table>
   <tr>
     <td><img width="100%" src="https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/01.png" title="Pic 1"/></td>
@@ -22,29 +24,34 @@
     <td><img width="100%" src="https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/03.png" title="Pic 3"/></td>
   </tr>
   <tr>
+    <td><img width="100%" src="https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/lockscreen.jpg" title="Lockscreen"/></td>
     <td><img width="100%" src="https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/04.png" title="Pic 4"/></td>
     <td><img width="100%" src="https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/05.jpg" title="Pic 5"/></td>
-    <td><img width="100%" src="https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/06.jpg" title="Pic 6"/></td>
   </tr>
   <tr>
+    <td><img width="100%" src="https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/06.jpg" title="Pic 6"/></td>
     <td><img width="100%" src="https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/07.png" title="Pic 7"/></td>
     <td><img width="100%" src="https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/08.png" title="Pic 8"/></td>
-    <td><img width="100%" src="https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/09.png" title="Pic 9"/></td>
   </tr>
   <tr>
+    <td><img width="100%" src="https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/09.png" title="Pic 9"/></td>
     <td><img width="100%" src="https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/10.jpg" title="Pic 10"/></td>
     <td><img width="100%" src="https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/11.jpg" title="Pic 11"/></td>
-    <td><img width="100%" src="https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/12.png" title="Pic 12"/></td>
   </tr>
   <tr>
+    <td><img width="100%" src="https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/12.png" title="Pic 12"/></td>
     <td><img width="100%" src="https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/13.png" title="Pic 13"/></td>
     <td><img width="100%" src="https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/14.png" title="Pic 14"/></td>
-    <td><img width="100%" src="https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/15.png" title="Pic 15"/></td>
   </tr>
   <tr>
+    <td><img width="100%" src="https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/15.png" title="Pic 15"/></td>
     <td><img width="100%" src="https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/16.jpg" title="Pic 16"/></td>
     <td><img width="100%" src="https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/17.jpg" title="Pic 17"/></td>
+  </tr>
+  <tr>
     <td><img width="100%" src="https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/18.png" title="Pic 18"/></td>
+    <td></td>
+    <td></td>
   </tr>
 </table>
 
