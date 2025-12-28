@@ -13,7 +13,7 @@
 
 > A modern, aesthetically-pleasing Wayland desktop environment configuration for Artix Linux (dinit) featuring Hyprland, dynamic PyWAL theming, and extensive customization.
 
-## ✨ Screenshots
+## 🎨 Screenshots
 ![alt text](https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/01.png "Pic 1")
 ![alt text](https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/02.png "Pic 2")
 ![alt text](https://github.com/ShengHuiPang/dotfiles/blob/master/Screenshots/03.png "Pic 3")
