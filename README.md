@@ -155,7 +155,7 @@ README.md
 hyprland hyprpanel hyprlock xdg-desktop-portal-hyprland wayvnc
 
 # Wallpaper & Theming
-swww python-pywal16 imagemagick
+awww python-pywal16 imagemagick
 
 # Launchers & Menus
 rofi-wayland wofi wlogout
