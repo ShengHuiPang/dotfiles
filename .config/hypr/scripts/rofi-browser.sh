@@ -5,7 +5,7 @@ browsers="Brave Web Browser
 Brave Web Browser (nightly)
 Firefox
 Tor Browser
-Chromium"
+Google Chrome Canary"
 
 # Show the browsers in Rofi and get the selected browser
 selected=$(printf "%s\n" "$browsers" | rofi -show -dmenu -p "Choose browser")
@@ -24,8 +24,8 @@ case "$selected" in
     "Tor Browser")
         torbrowser-launcher &
         ;;
-    Chromium)
-        chromium --enable-features=WaylandWindowDecorations --ozone-platform-hint=wayland --enable-wayland-ime --password-store=basic &
+    "Google Chrome Canary")
+        google-chrome-canary --enable-features=WaylandWindowDecorations --ozone-platform-hint=wayland --enable-wayland-ime --password-store=basic &
         ;;
     *)
         printf "No browser selected or unknown choice.\n"

@@ -1,3 +1,4 @@
+alias hist='bat --pager="less -RX" ~/.cache/zsh/history'
 alias poweroff='loginctl poweroff'
 alias reboot='loginctl reboot'
 alias mv='mv -iv'
@@ -95,12 +96,33 @@ pmi() {
   echo "Selected package(s):"
   echo "$pkglist"
   echo
+
+  local -a pacman_flags
+
+  # Sync choice
+  printf "Sync package databases first? (-Sy) [y/N]: "
+  read sync_reply </dev/tty
+
+  if [[ "$sync_reply" =~ ^[Yy]$ ]]; then
+    pacman_flags=(-Sy)
+  else
+    pacman_flags=(-S)
+  fi
+
+  # Needed flag
+  printf "Install only packages needed? (--needed) [y/N]: "
+  read needed </dev/tty
+
+  if [[ "$needed" =~ ^[Yy]$ ]]; then
+    pacman_flags+=(--needed)
+  fi
+
   printf "Install selected package(s)? [Y/n]: "
   read REPLY </dev/tty
   echo
 
   if [[ -z "$REPLY" || "$REPLY" =~ ^[Yy]$ ]]; then
-      echo "$pkglist" | awk '{print $1}' | xargs -ro doas pacman -Sy
+      echo "$pkglist" | awk '{print $1}' | xargs -ro doas pacman "${pacman_flags[@]}"
   else
       echo "Cancelled."
   fi
@@ -137,12 +159,34 @@ pi() {
   echo "Selected package(s):"
   echo "$pkglist"
   echo
+
+  local -a pacman_flags
+
+  # Sync choice
+  printf "Sync package databases first? (-Sy) [y/N]: "
+  read sync_reply </dev/tty
+
+  if [[ "$sync_reply" =~ ^[Yy]$ ]]; then
+    pacman_flags=(-Sy)
+  else
+    pacman_flags=(-S)
+  fi
+
+  # Needed flag
+  printf "Install only packages needed? (--needed) [y/N]: "
+  read needed </dev/tty
+
+  if [[ "$needed" =~ ^[Yy]$ ]]; then
+    pacman_flags+=(--needed)
+  fi
+
+
   printf "Install selected package(s)? [Y/n]: "
   read REPLY </dev/tty
   echo
 
   if [[ -z "$REPLY" || "$REPLY" =~ ^[Yy]$ ]]; then
-      echo "$pkglist" | awk '{print $1}' | xargs -ro yay -Sy
+      echo "$pkglist" | awk '{print $1}' | xargs -ro yay "${pacman_flags[@]}"
   else
       echo "Cancelled."
   fi

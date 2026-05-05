@@ -82,8 +82,8 @@ if [ -n "$selected" ]; then
 
     # Ensure a valid wallpaper was found before proceeding
     if [ -n "$original_path" ]; then
-        # Set wallpaper using swww with the original file
-        swww img "$original_path" --transition-type any --transition-step 255 --transition-fps 60 --transition-duration 0.8 && sleep 0.575 && wal -i "$original_path"
+        # Set wallpaper using awww with the original file
+        awww img "$original_path" --transition-type any --transition-step 255 --transition-fps 60 --transition-duration 0.8 && sleep 0.575 && wal -i "$original_path"
         
         sddmchangechoice="Yes
 No"

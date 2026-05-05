@@ -6,31 +6,31 @@
 }
 {
     "label" : "hibernate",
-    "action" : "killall wlogout && sleep 0.25 && loginctl hibernate",
+    "action" : "killall wlogout && sleep 0.1 && loginctl hibernate",
     "text" : "Hibernate",
     "keybind" : "h"
 }
 {
     "label" : "logout",
-    "action" : "killall wlogout && sleep 0.25 && hyprctl dispatch exit",
+    "action" : "killall wlogout && sleep 0.1 && hyprctl dispatch exit",
     "text" : "Logout",
     "keybind" : "e"
 }
 {
     "label" : "shutdown",
-    "action" : "killall wlogout && sleep 0.25 && loginctl poweroff",
+    "action" : "killall wlogout && sleep 0.1 && loginctl poweroff",
     "text" : "Shutdown",
     "keybind" : "s"
 }
 {
     "label" : "suspend",
-    "action" : "killall wlogout && sleep 0.25 && loginctl suspend",
+    "action" : "killall wlogout && sleep 0.1 && loginctl suspend",
     "text" : "Suspend",
     "keybind" : "u"
 }
 {
     "label" : "reboot",
-    "action" : "killall wlogout && sleep 0.25 && loginctl reboot",
+    "action" : "killall wlogout && sleep 0.1 && loginctl reboot",
     "text" : "Reboot",
     "keybind" : "r"
 }
