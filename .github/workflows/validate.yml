@@ -92,7 +92,7 @@ jobs:
     name: 🧪 Install Script Test (Arch Linux)
     runs-on: ubuntu-latest
     container:
-      image: artixlinux:base-dinit
+      image: artixlinux:base
     steps:
       - name: 📥 Checkout repository
         uses: actions/checkout@v4
