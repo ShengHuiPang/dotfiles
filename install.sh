@@ -150,51 +150,57 @@ fi
 print_header "Checking Dependencies"
 
 REQUIRED_DEPS=(
-    "git"
-    "hyprland"
-    "alacritty"
-    "zsh"
-    "rofi"
-    "wofi"
-    "swww"
-    "python-pywal16"
-    "grim"
-    "slurp"
-    "wayvnc"
+    "git:git"
+    "hyprland:Hyprland"
+    "alacritty:alacritty"
+    "zsh:zsh"
+    "rofi:rofi"
+    "wofi:wofi"
+    "awww:awww"
+    "python-pywal16:wal"
+    "grim:grim"
+    "slurp:slurp"
+    "wayvnc:wayvnc"
 )
 
 OPTIONAL_DEPS=(
-    "ags-hyprpanel-git"
-    "hyprlock"
-    "wlogout"
-    "kitty"
-    "playerctl"
-    "brightnessctl"
-    "thunar"
-    "eza"
-    "fzf"
-    "fastfetch"
-    "zoxide"
+    "ags-hyprpanel-git:ags"
+    "hyprlock:hyprlock"
+    "wlogout:wlogout"
+    "kitty:kitty"
+    "playerctl:playerctl"
+    "brightnessctl:brightnessctl"
+    "thunar:thunar"
+    "eza:eza"
+    "fzf:fzf"
+    "fastfetch:fastfetch"
+    "zoxide:zoxide"
 )
 
 missing_required=()
 missing_optional=()
 
 for dep in "${REQUIRED_DEPS[@]}"; do
-    if check_command "$dep"; then
-        print_success "$dep installed"
+    pkg="${dep%%:*}"
+    cmd="${dep##*:}"
+
+    if check_command "$cmd"; then
+        print_success "$pkg installed"
     else
-        print_error "$dep not found (REQUIRED)"
-        missing_required+=("$dep")
+        print_error "$pkg not found (REQUIRED)"
+        missing_required+=("$pkg")
     fi
 done
 
 for dep in "${OPTIONAL_DEPS[@]}"; do
-    if check_command "$dep"; then
-        print_success "$dep installed"
+    pkg="${dep%%:*}"
+    cmd="${dep##*:}"
+
+    if check_command "$cmd"; then
+        print_success "$pkg installed"
     else
-        print_warning "$dep not found (optional)"
-        missing_optional+=("$dep")
+        print_warning "$pkg not found (optional)"
+        missing_optional+=("$pkg")
     fi
 done
 
